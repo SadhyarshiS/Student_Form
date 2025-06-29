@@ -5,13 +5,13 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Diagnostics; // For debugging
+using System.Diagnostics; 
 
 public class StudentController : Controller
 {
     private DatabaseHelper db = new DatabaseHelper();
 
-    // GET: Display the form
+    
     public ActionResult Index()
     {
         var model = new Student
@@ -27,7 +27,7 @@ public class StudentController : Controller
         return View(model);
     }
 
-    // POST: Handle form submission
+    
     [HttpPost]
     [ValidateAntiForgeryToken]
     public ActionResult CreateStudent(Student m, HttpPostedFileBase file)
